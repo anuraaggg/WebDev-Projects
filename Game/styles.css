@@ -1,0 +1,97 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f5;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 500px;
+}
+
+
+.heading {
+    font-size: 1.8rem;
+    color: #007bff;
+    margin-bottom: 20px;
+}
+
+.scoreboard {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.score {
+    background-color: #f9f9f9;
+    padding: 10px 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.game-area {
+    margin-top: 20px;
+}
+
+.choices {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.choices label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+}
+
+.choices input[type="radio"] {
+    display: none; 
+}
+
+.choices img {
+    width: 80px;
+    height: 80px;
+    transition: transform 0.2s ease;
+}
+
+.choices input[type="radio"]:checked + img {
+    transform: scale(1.2);
+    border: 2px solid #007bff;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.choices img:hover {
+    transform: scale(1.1);
+}
+
+.sub{
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.play-button:hover {
+    background-color: #0056b3;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
