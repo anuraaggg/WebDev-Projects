@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <h1 style="text-align: center;">Calculator</h1>
+    <div class="calculator">
+        <div class="row1 rows">
+            <input type="text" id="display" readonly>
+        </div>
+        <div class="row2 rows">
+            <button type="button" class="op" onclick="addDisplay('+')">+</button>
+            <button type="button" onclick="addDisplay('7')">7</button>
+            <button type="button" onclick="addDisplay('8')">8</button>
+            <button type="button" onclick="addDisplay('9')">9</button>
+        </div>
+        <div class="row3 rows">
+            <button type="button" class="op" onclick="addDisplay('-')">-</button>
+            <button type="button" onclick="addDisplay('4')">4</button>
+            <button type="button" onclick="addDisplay('5')">5</button>
+            <button type="button" onclick="addDisplay('6')">6</button>
+        </div>
+        <div class="row4 rows">
+            <button type="button" class="op" onclick="addDisplay('*')">*</button>
+            <button type="button" onclick="addDisplay('1')">1</button>
+            <button type="button" onclick="addDisplay('2')">2</button>
+            <button type="button" onclick="addDisplay('3')">3</button>
+        </div>
+        <div class="row5 rows">
+            <button type="button" class="op" onclick="addDisplay('/')">/</button>
+            <button type="button" onclick="addDisplay('0')">0</button>
+            <button type="button" onclick="addDisplay('.')">.</button>
+            <button type="button" onclick="calculate()">=</button>
+        </div>
+        <div class="row6 rows">
+            <button type="button" class="op" onclick="clearDisplay()">AC</button>
+        </div>
+    </div>
+</body>
+</html>
