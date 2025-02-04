@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Reverse Digits and Check Palindrome</title>
+</head>
+<body>
+    <script>
+        function reverseNumber(number) {
+            let reversed = parseInt(number.toString().split('').reverse().join(''));
+            return reversed;
+        }
+
+        function isPalindrome(number) {
+            let reversed = reverseNumber(number);
+            return number === reversed;
+        }
+
+        let num = parseInt(prompt("Enter a number:"));
+        let reversedNum = reverseNumber(num);
+        let palindromeCheck = isPalindrome(num);
+
+        alert("The reversed number is: " + reversedNum);
+        alert("Is the number palindromic? " + (palindromeCheck ? "Yes" : "No"));
+    </script>
+</body>
+</html>

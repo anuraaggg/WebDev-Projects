@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fibonacci Sequence</title>
+</head>
+<body>
+    <script>
+        function fibonacci(n) {
+            if (n <= 1) {
+                return n;
+            } else {
+                return fibonacci(n - 1) + fibonacci(n - 2);
+            }
+        }
+
+        function generateFibonacciSequence(N) {
+            let sequence = [];
+            for (let i = 0; i < N; i++) {
+                sequence.push(fibonacci(i));
+            }
+            return sequence;
+        }
+
+        let N = parseInt(prompt("Enter the number of Fibonacci numbers to generate:"));
+        let fibonacciSequence = generateFibonacciSequence(N);
+
+        alert("The first " + N + " numbers in the Fibonacci sequence are: " + fibonacciSequence.join(", "));
+    </script>
+</body>
+</html>

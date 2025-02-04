@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Find LCM</title>
+</head>
+<body>
+    <script>
+        function gcd(a, b) {
+            if (b === 0) {
+                return a;
+            }
+            return gcd(b, a % b);
+        }
+
+        function lcm(a, b) {
+            return (a * b) / gcd(a, b);
+        }
+
+        let num1 = parseInt(prompt("Enter the first number:"));
+        let num2 = parseInt(prompt("Enter the second number:"));
+
+        let result = lcm(num1, num2);
+
+        alert("The LCM of " + num1 + " and " + num2 + " is: " + result);
+    </script>
+</body>
+</html>

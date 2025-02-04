@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Decimal to Binary and Binary to Decimal</title>
+</head>
+<body>
+    <script>
+        function decimalToBinary(decimal) {
+            return decimal.toString(2);
+        }
+
+        function binaryToDecimal(binary) {
+            return parseInt(binary, 2);
+        }
+
+        let decimalInput = prompt("Enter a decimal number:");
+        let binaryOutput = decimalToBinary(Number(decimalInput));
+        alert("Binary representation: " + binaryOutput);
+
+        let binaryInput = prompt("Enter a binary number:");
+        let decimalOutput = binaryToDecimal(binaryInput);
+        alert("Decimal representation: " + decimalOutput);
+    </script>
+</body>
+</html>

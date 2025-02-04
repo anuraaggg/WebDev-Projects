@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Even or Odd Checker</title>
+</head>
+<body>
+    <script>
+        function checkEvenOdd(number) {
+            return number % 2 === 0 ? "Even" : "Odd";
+        }
+
+        function separateEvenOdd(numbers) {
+            let evenNumbers = [];
+            let oddNumbers = [];
+
+            for (let i = 0; i < numbers.length; i++) {
+                if (numbers[i] % 2 === 0) {
+                    evenNumbers.push(numbers[i]);
+                } else {
+                    oddNumbers.push(numbers[i]);
+                }
+            }
+
+            return {
+                even: evenNumbers,
+                odd: oddNumbers
+            };
+        }
+
+        let mode = prompt("Do you want to check a single number or multiple numbers? Enter 'single' or 'multiple':").toLowerCase();
+
+        if (mode === 'single') {
+            let num = parseInt(prompt("Enter a number:"));
+            alert("The number " + num + " is " + checkEvenOdd(num));
+        } else if (mode === 'multiple') {
+            let n = parseInt(prompt("Enter the number of elements:"));
+            let numbers = [];
+
+            for (let i = 0; i < n; i++) {
+                numbers.push(parseInt(prompt("Enter number " + (i + 1) + ":")));
+            }
+
+            let result = separateEvenOdd(numbers);
+            alert("Even numbers: " + result.even.join(", "));
+            alert("Odd numbers: " + result.odd.join(", "));
+        } else {
+            alert("Invalid input. Please reload and try again.");
+        }
+    </script>
+</body>
+</html>

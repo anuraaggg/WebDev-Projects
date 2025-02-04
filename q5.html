@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Count Digits</title>
+</head>
+<body>
+    <script>
+        function countDigits(number) {
+            return number.toString().length;
+        }
+
+        let num = parseInt(prompt("Enter an integer:"));
+        let digitCount = countDigits(num);
+
+        alert("The number of digits in " + num + " is: " + digitCount);
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Find Missing Number</title>
+</head>
+<body>
+    <script>
+        function findMissingNumber(arr) {
+            let n = arr.length + 1;
+            let totalSum = (n * (n + 1)) / 2;
+            let sumOfArray = arr.reduce((a, b) => a + b, 0);
+            return totalSum - sumOfArray;
+        }
+
+        let input = prompt("Enter array elements separated by commas and enclosed in brackets:");
+        let inputArray = input.replace(/[\[\]\s]/g, "").split(",").map(Number);
+
+        if (inputArray.every(number => Number.isInteger(number))) {
+            let missingNumber = findMissingNumber(inputArray);
+            alert("The missing number is: " + missingNumber);
+        } else {
+            alert("Please enter valid numbers separated by commas.");
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Temperature Converter</title>
+</head>
+<body>
+    <script>
+        function celsiusToFahrenheit(celsius) {
+            return (celsius * 9/5) + 32;
+        }
+
+        function fahrenheitToCelsius(fahrenheit) {
+            return (fahrenheit - 32) * 5/9;
+        }
+
+        let mode = prompt("Do you want to convert from Celsius to Fahrenheit or Fahrenheit to Celsius? Enter 'CtoF' or 'FtoC':").toUpperCase();
+        
+        if (mode === 'CTOF') {
+            let celsius = parseFloat(prompt("Enter temperature in Celsius:"));
+            let fahrenheit = celsiusToFahrenheit(celsius);
+            alert(celsius + "°C is equal to " + fahrenheit + "°F");
+        } else if (mode === 'FTOC') {
+            let fahrenheit = parseFloat(prompt("Enter temperature in Fahrenheit:"));
+            let celsius = fahrenheitToCelsius(fahrenheit);
+            alert(fahrenheit + "°F is equal to " + celsius + "°C");
+        } else {
+            alert("Invalid input. Please reload and try again.");
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Character Count</title>
+</head>
+<body>
+    <script>
+        function countCharacterOccurrences(str) {
+            let charCount = {};
+
+            for (let char of str) {
+                charCount[char] = (charCount[char] || 0) + 1;
+            }
+
+            return charCount;
+        }
+
+        let inputString = prompt("Enter a string:");
+        let result = countCharacterOccurrences(inputString);
+        alert("Character occurrences: " + JSON.stringify(result));
+    </script>
+</body>
+</html>

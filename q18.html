@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>First Non-Repeating Character</title>
+</head>
+<body>
+    <script>
+        function firstNonRepeatingCharacter(str) {
+            for (let i = 0; i < str.length; i++) {
+                let char = str[i];
+                if (str.indexOf(char) === str.lastIndexOf(char)) {
+                    return char;
+                }
+            }
+            return null;
+        }
+
+        let inputString = prompt("Enter a string:");
+        let result = firstNonRepeatingCharacter(inputString);
+
+        if (result) {
+            alert("The first non-repeating character is: " + result);
+        } else {
+            alert("There is no non-repeating character.");
+        }
+    </script>
+</body>
+</html>

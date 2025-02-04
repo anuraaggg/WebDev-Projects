@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Count Vowels and Consonants</title>
+</head>
+<body>
+    <script>
+        function countVowelsAndConsonants(str) {
+            let vowels = "aeiouAEIOU";
+            let vowelCount = 0;
+            let consonantCount = 0;
+            let vowelList = [];
+
+            for (let char of str) {
+                if (vowels.includes(char)) {
+                    vowelCount++;
+                    vowelList.push(char);
+                } else if (char.toLowerCase() !== char.toUpperCase()) {
+                    consonantCount++;
+                }
+            }
+
+            return {
+                vowels: vowelCount,
+                consonants: consonantCount,
+                vowelList: vowelList
+            };
+        }
+
+        let inputString = prompt("Enter a string:");
+        let result = countVowelsAndConsonants(inputString);
+
+        alert("Vowels: " + result.vowels + " (" + result.vowelList.join(", ") + ")\nConsonants: " + result.consonants);
+    </script>
+</body>
+</html>
